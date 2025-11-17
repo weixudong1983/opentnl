@@ -8,17 +8,17 @@ networked object replication.
 import sys
 import os
 
-# Add parent directory to path to import tnl_py
+# Add parent directory to path to import tnl
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from tnl_py import *
-from tnl_py.types import *
-from tnl_py.bitstream import BitStream
-from tnl_py.net_object import NetObject, SafePtr
-from tnl_py.ghost_connection import GhostConnection
-from tnl_py.net_interface import NetInterface
-from tnl_py.random import Random
-from tnl_py.log import logprintf
+from tnl import *
+from tnl.types import *
+from tnl.bitstream import BitStream
+from tnl.net_object import NetObject, SafePtr
+from tnl.ghost_connection import GhostConnection
+from tnl.net_interface import NetInterface
+from tnl.random import Random
+from tnl.log import logprintf
 
 class Position:
     """Position structure for game objects"""

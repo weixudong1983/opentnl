@@ -10,8 +10,8 @@ and allows clients to connect.
 import sys
 import time
 from test_game import TestGame, Position
-from tnl_py.address import Address
-from tnl_py.log import logprintf
+from tnl.address import Address
+from tnl.log import logprintf
 
 def main():
     """Main server function"""

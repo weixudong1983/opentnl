@@ -211,8 +211,6 @@ class GhostConnection(NetConnection):
                     ghost_info = self.ghost_array[ghost_id]
                     if ghost_info.obj:
                         ghost_info.obj.unpack_update(self, stream)
-                else:
-                    logprintf("Warning: Update for unknown ghost %d", ghost_id)
     
     def post_net_event(self, event):
         """Post a network event (RPC) - simplified stub"""
