@@ -3,6 +3,30 @@ opentnl
 
 Torque Network Library
 
+## Python Version Available! 🐍
+
+A simplified Python reimplementation of the Zap game is now available in the `python_zap/` directory.
+
+**Quick Start:**
+```bash
+cd python_zap
+pip install -r requirements.txt
+python main.py
+```
+
+See [python_zap/GUIDE.md](python_zap/GUIDE.md) for complete documentation.
+
+### Why Python Version?
+- ✓ Easy to run and modify
+- ✓ Cross-platform (Windows, macOS, Linux)
+- ✓ No complex build system needed
+- ✓ Simplified crypto (no libtomcrypt dependency)
+- ✓ Great for learning game development
+
+---
+
+# Original C++ Documentation
+
 # TNLTest
 
 #### Creation of the initial player object?
