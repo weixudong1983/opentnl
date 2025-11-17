@@ -2,6 +2,14 @@
 
 This is a simplified Python reimplementation of the Zap multiplayer vector graphics space game from OpenTNL.
 
+## Quick Start (TL;DR)
+
+```bash
+cd python_zap
+python verify_install.py    # Checks everything and runs tests
+python main.py              # Start the game!
+```
+
 ## Requirements
 
 - Python 3.8 or higher
@@ -14,10 +22,36 @@ This is a simplified Python reimplementation of the Zap multiplayer vector graph
 pip install -r requirements.txt
 ```
 
+Or run the verification script which will install dependencies automatically:
+
+```bash
+python verify_install.py
+```
+
 ## Running the Game
 
 ```bash
 python main.py
+```
+
+Or use the launcher with dependency checking:
+
+```bash
+python run.py
+```
+
+## Running Tests
+
+```bash
+python test_game.py
+```
+
+## Cryptography Demo
+
+See how libtomcrypt was replaced with Python's cryptography library:
+
+```bash
+python demo_crypto.py
 ```
 
 ## Controls
