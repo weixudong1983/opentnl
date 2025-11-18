@@ -6,19 +6,20 @@ This is a Python implementation of the Torque Network Library (TNL) and its test
 
 The TNL library has been rewritten in Python, focusing on the core networking features needed for the test application. The implementation includes:
 
-- **tnl_py/** - Python TNL library
+- **tnl/** - Python TNL library
   - BitStream for bit-level serialization
   - NetObject for network-replicated objects
   - GhostConnection for object replication
   - NetInterface for UDP networking
   - Supporting utilities (Random, Log, Address, etc.)
 
-- **test_py/** - Test application
+- **test/** - Test application
   - TestGame: Main game class
   - Player: Networked player objects
   - Building: Static building objects
-  - server.py: Dedicated server
-  - client.py: Client application
+  - server.py: Dedicated server (console-based)
+  - client.py: Client application (console-based)
+  - **visualizer.py: Graphical client with pygame** ⭐ NEW
 
 ## Changes from C++ Version
 
@@ -36,35 +37,57 @@ The TNL library has been rewritten in Python, focusing on the core networking fe
 
 ## Running the Tests
 
-### Start the Server
+### Option 1: Graphical Visualizer (Recommended)
+
+The visualizer provides a visual representation of the game world with players and buildings.
 
 ```bash
-cd test_py
+cd test
+python3 visualizer.py
+```
+
+**Controls:**
+- Left-click to move your player
+- Right-click for menu (switch between client/server/both modes)
+- ESC to quit
+
+**Requires:** `pip install pygame`
+
+![Visualizer Screenshot](https://github.com/user-attachments/assets/56837ade-b26e-43f7-adfd-604dcec4eaaf)
+
+See [test/VISUALIZER_README.md](test/VISUALIZER_README.md) for details.
+
+### Option 2: Console-Based Server and Client
+
+#### Start the Server
+
+```bash
+cd test
 python3 server.py [port]
 ```
 
 Default port is 28999 if not specified.
 
-### Start a Client
+#### Start a Client
 
 ```bash
-cd test_py
+cd test
 python3 client.py [server_host] [server_port]
 ```
 
 Default is localhost:28999 if not specified.
 
-### Example
+#### Example
 
 Terminal 1 (Server):
 ```bash
-cd test_py
+cd test
 python3 server.py
 ```
 
 Terminal 2 (Client):
 ```bash
-cd test_py
+cd test
 python3 client.py localhost
 ```
 
@@ -80,7 +103,8 @@ You should see output like:
 ## Requirements
 
 - Python 3.7 or higher
-- No external dependencies (uses only standard library)
+- No external dependencies for core library (uses only standard library)
+- Optional: pygame for graphical visualizer (`pip install pygame`)
 
 ## Architecture
 
@@ -150,5 +174,5 @@ Potential additions:
 - Connection security (simple token-based authentication)
 - Packet loss detection and retransmission
 - Compression for larger object counts
-- GUI client using pygame or tkinter
+- ~~GUI client using pygame or tkinter~~ ✓ Done - see visualizer.py
 - Performance optimizations

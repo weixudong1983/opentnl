@@ -1,3 +1,6 @@
 # TNL Python Implementation Requirements
-# No external dependencies required - uses only Python standard library
+# Core library uses only Python standard library
 # Tested with Python 3.7+
+
+# Optional: For visualization (visualizer.py)
+pygame>=2.0.0

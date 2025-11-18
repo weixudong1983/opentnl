@@ -2,11 +2,36 @@
 
 ## Installation
 
-No installation needed! Uses only Python standard library.
+No installation needed for core library! Uses only Python standard library.
 
 **Requirements:** Python 3.7 or higher
 
+**Optional:** For graphical visualizer: `pip install pygame`
+
 ## Running the Tests
+
+### Option 1: Graphical Visualizer (Recommended) 🎮
+
+```bash
+cd test
+python3 visualizer.py
+```
+
+**Controls:**
+- **Left-click**: Move your player to clicked position
+- **Right-click**: Open menu to switch modes
+- **ESC**: Quit
+
+**What you'll see:**
+- Yellow background
+- Red buildings (obstacles)
+- Blue AI players
+- White square for your player
+- Gray circle showing your visibility range
+
+![Screenshot](https://github.com/user-attachments/assets/56837ade-b26e-43f7-adfd-604dcec4eaaf)
+
+### Option 2: Console-Based (No GUI Required)
 
 ### 1. Start the Server
 
